@@ -1,0 +1,28 @@
+
+/*
+  囿于部份车机系统的web引擎的版本部碮同，有一部份不支持 CSS prefers-color-scheme 能力；
+  引用小程序运行环境提供的CSS 样式变量是兼容性最好的方案。
+
+  你可以通过切换电脑系统的昼夜模式来实现IDE下的昼夜模式的模拟：
+    ● windows：设置 - 个性化 - 颜色 - 选择默认的应用模式 ： 亮 / 暗 
+    ● mac：系统设置 - 外观 - 深色 / 浅色
+
+*/
+/* 定义全局可引用的变量, 默认样式 /夜（暗）模式 */
+:root{
+  --bg_color:var(--alios-color-background,#000000); /* 引用容器的默认背景颜色，无效则为 黑色  */
+  --font_color:var(--alios-color-text-title,#FFFFFF); /* 引用容器的默认文字颜色，无效则为 白色 */
+  --font_size:var(--alios-font-size,32px); /* 引用系统设字的文字大小，无效则为32px */
+}
+/* 昼（明亮）模式，对于不支持 CSS prefers-color-scheme 不生效。 */
+@media (prefers-color-scheme:light) { 
+  :root{
+    --bg_color:var(--alios-color-background,#FFFFFF); /* 引用容器的默认背景颜色，无效则为 白色  */
+    --font_color:var(--alios-color-text-title,#000000); /* 引用容器的默认文字颜色，无效则为 黑色 */
+  }
+}
+page {
+  background:var(--bg_color);
+  color:var(--font_color);
+  font-size: var(--font_size);
+}
