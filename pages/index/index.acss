@@ -1,3 +1,9 @@
 page{
   padding: 1em;
+  line-height: 1.2;
+}
+.bgcolor2{
+  background-color: rgba(128,128,128,0.1);
+  padding: 1em;
+  margin: 0.1em;
 }

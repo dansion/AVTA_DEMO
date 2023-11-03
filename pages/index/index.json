@@ -1,1 +1,8 @@
-{}
+{
+  "window": {
+    "defaultTitle": "车载小程序/昼夜模式DEMO-页面的内容",
+    "titleBarColor":"#000000",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle":"white"
+  }
+}

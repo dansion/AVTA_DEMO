@@ -1,9 +1,10 @@
 {
   "subPackageBuildType": "shared",
-  "pageOrientation":"auto",
-  "themeAdapted":"auto",
+  "pageOrientation": "auto",
+  "themeAdapted": "auto",
   "pages": [
     "pages/index/index"
+
   ],
   "window": {
     "defaultTitle": "车载小程序/昼夜模式DEMO"

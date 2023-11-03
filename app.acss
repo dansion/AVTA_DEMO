@@ -13,6 +13,8 @@
   --bg_color:var(--alios-color-background,#000000); /* 引用容器的默认背景颜色，无效则为 黑色  */
   --font_color:var(--alios-color-text-title,#FFFFFF); /* 引用容器的默认文字颜色，无效则为 白色 */
   --font_size:var(--alios-font-size,32px); /* 引用系统设字的文字大小，无效则为32px */
+  
+
 }
 /* 昼（明亮）模式，对于不支持 CSS prefers-color-scheme 不生效。 */
 @media (prefers-color-scheme:light) { 
@@ -21,8 +23,15 @@
     --font_color:var(--alios-color-text-title,#000000); /* 引用容器的默认文字颜色，无效则为 黑色 */
   }
 }
+/*不支持prefers-color-scheme的车机，支持根节点className注入的兼容方案  */
+.prefers-color-scheme-light {
+  --bg_color:var(--alios-color-background,#FFFFFF); /* 引用容器的默认背景颜色，无效则为 白色  */
+  --font_color:var(--alios-color-text-title,#000000); /* 引用容器的默认文字颜色，无效则为 黑色 */
+}
+
 page {
   background:var(--bg_color);
   color:var(--font_color);
   font-size: var(--font_size);
 }
+
